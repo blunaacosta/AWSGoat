@@ -41,7 +41,6 @@ jobs:
         ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
         echo "ACCOUNT_ID=$ACCOUNT_ID" >> $GITHUB_ENV
     
-
     - name: Retrieve tfstate
       run: |
         cd modules/${{ github.event.inputs.module }}
